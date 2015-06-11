@@ -1,0 +1,83 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="com.catapult.android.mca.PatientDetailsActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc
+    -->
+    <!-- android:text="@string/dummy_content" -->
+
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text=""
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+
+            <Button
+                android:id="@+id/dummy_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dummy_button" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+			android:id="@+id/tablelayout1" >
+             <TableRow
+                
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                
+                <TextView android:padding="5dp" android:background="@drawable/shape" android:id="@+id/attrib_name1" android:textStyle="bold" android:text="PATIENT ID"/>
+               	<TextView android:padding="5dp" android:background="@drawable/shape" android:id="@+id/attrib_name2" android:textStyle="bold" android:text="STATUS"/>
+               	<TextView android:padding="5dp" android:background="@drawable/shape" android:id="@+id/attrib_name3" android:textStyle="bold" android:text="LAST NAME"/>
+               	<TextView android:padding="5dp" android:background="@drawable/shape" android:id="@+id/attrib_name4" android:textStyle="bold" android:text="FIRST NAME"/>
+               	<TextView android:padding="5dp" android:background="@drawable/shape" android:id="@+id/attrib_name5" android:textStyle="bold" android:text="DOB"/>
+               	<TextView android:padding="5dp" android:background="@drawable/shape" android:id="@+id/attrib_name6" android:textStyle="bold" android:text="LANGUAGE"/>
+               	<TextView android:padding="5dp" android:background="@drawable/shape" android:id="@+id/attrib_name7" android:textStyle="bold" android:text="SERVICES"/>
+               	<TextView android:padding="5dp" android:background="@drawable/shape" android:id="@+id/attrib_name8" android:textStyle="bold" android:text="START TIME"/>
+               	<TextView android:padding="5dp" android:background="@drawable/shape" android:id="@+id/attrib_name9" android:textStyle="bold" android:text="ELAPSED TIME"/>
+               	<TextView android:padding="5dp" android:background="@drawable/shape" android:id="@+id/attrib_name10" android:textStyle="bold" android:text="FLU SHOT"/>
+               	<TextView android:padding="5dp" android:background="@drawable/shape" android:id="@+id/attrib_name11" android:textStyle="bold" android:text="TDAP"/>
+               	<TextView android:padding="5dp" android:background="@drawable/shape" android:id="@+id/attrib_name12" android:textStyle="bold" android:text="CONTININE"/>              
+            </TableRow>
+            
+            
+        </TableLayout>
+    </FrameLayout>
+
+</FrameLayout>

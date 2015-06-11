@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/Appt"
+        style="@style/FontSizeMedium"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="5dp"
+        android:clickable="true"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Type"
+        style="@style/FontSizeMedium"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Lastname"
+        style="@style/FontSizeMedium"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:clickable="true"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Firstname"
+        style="@style/FontSizeMedium"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Patientid"
+        style="@style/FontSizeMedium"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Language"
+        style="@style/FontSizeMedium"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/HQ"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/HE"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/NP"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/FLUSHOT"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/TDAP"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="20dp"
+        android:text="" />
+
+
+    <TextView
+        android:id="@+id/Team"
+        style="@style/FontSizeMedium"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <Button
+        android:id="@+id/Action"
+        style="@style/FontSizeMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_weight="1"
+        android:textAllCaps="false"
+        android:background="@android:color/holo_orange_light"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/Alerts"
+        style="@style/FontSizeMedium"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textColor="@android:color/black"
+        android:layout_weight="1"
+        android:text="" />
+
+</LinearLayout>

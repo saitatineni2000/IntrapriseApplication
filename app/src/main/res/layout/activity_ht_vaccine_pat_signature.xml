@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@android:color/darker_gray" >
+
+       <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/site_logo" />
+
+        <TextView
+            android:id="@+id/clinictext"
+            style="@style/FontSizeMedium"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/logo"
+            android:text="@string/clinic_name"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/clinictime"
+            style="@style/FontSizeMedium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/clinictext"
+            android:text="Clinic Time:"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/FontSizeMedium"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/clinictime"
+            android:clickable="true"
+            android:text="@string/time"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/home"
+            style="@style/FontSizeMedium"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/time"
+            android:text="@string/home"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/user"
+            style="@style/FontSizeMedium"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/home"
+            android:text="@string/user"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/logout"
+            style="@style/FontSizeMedium"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/user"
+            android:text="@string/logout"
+            android:textColor="#0079D2" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/vaccine_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/vaccine_title_text"
+            style="@style/FontSizeLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vaccine"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/imagesLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vaccine_title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/image10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/piccolo_completed" />
+
+        <ImageView
+            android:id="@+id/image20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/a1c_completed" />
+
+        <ImageView
+            android:id="@+id/image30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/manual_completed" />
+
+        <ImageView
+            android:id="@+id/image40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/vaccine_selected" />
+
+        <ImageView
+            android:id="@+id/image50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/services" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagesLayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp" >
+
+        <TextView
+            android:id="@+id/main_text"
+            style="@style/FontSizeSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="I certify that I am 18 years of age. I have had a chance to ask questions to my satisfaction. I understand the benefit and risk of influenza Vaccine and request that the vaccine given to me or the person named above for whom I am authorized to make the request. I hereby give my consent to the healthcare provider of Catapult Health to administer the vaccine(s). I agree to stay in the general area for fifteen (15) minutes after receiving my vaccination. I authorize the release of any medical information or other information necessary to process an insurance claim. Further, I hereby release and hold harmless Catapult Health, its employees, agents, officers and directors from any and all liabilities or claims arising out of, or in connection with, or any way related to the administration of the vaccine(s) listed herein (except to the extent that Catapult Health id negligent therein)."
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/confirmation_text"
+            style="@style/FontSizeSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_text"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:text="I have been offered and read the CDC Vaccine Information Statement about"
+            android:textColor="@android:color/black" />
+
+        <CheckBox
+            android:id="@+id/influenza_check_box"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/main_text"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@+id/confirmation_text" />
+
+        <TextView
+            android:id="@+id/influenza"
+            style="@style/FontSizeSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_text"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/influenza_check_box"
+            android:text="Influenza"
+            android:textColor="@android:color/black" />
+
+        <CheckBox
+            android:id="@+id/tdap_check_box"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/main_text"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@+id/influenza" />
+
+        <TextView
+            android:id="@+id/tdap"
+            style="@style/FontSizeSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_text"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/tdap_check_box"
+            android:text="Tdap"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/patient_signature"
+            style="@style/FontSizeSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirmation_text"
+            android:layout_marginTop="25dp"
+            android:text="Patient Signature:"
+            android:textColor="@android:color/black" />
+
+        <RelativeLayout
+            android:id="@+id/patient_signature_box"
+            android:layout_width="450dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_below="@+id/patient_signature"
+            >
+            <LinearLayout
+                android:id="@+id/mysignature"
+                android:layout_width="450dp"
+                android:layout_height="100dp"
+                android:background="@drawable/rectangular_edittext"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:layout_below="@+id/mysignature"
+                />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_below="@+id/mysignature"
+                android:layout_toRightOf="@+id/clear"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/FontSizeSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/patient_signature_box"
+            android:layout_marginTop="20dp"
+            android:text="Date:"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/date_edit_box"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/date"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rectangular_edittext" />
+
+        <ImageButton
+            android:id="@+id/date_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/date_edit_box"
+            android:src="@drawable/calendar" />
+
+        <ImageView
+            android:id="@+id/image60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/arrow_circle_right" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

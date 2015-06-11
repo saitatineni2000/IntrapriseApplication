@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/header"
+        android:background="@android:color/darker_gray"
+        >
+
+    <ImageView
+       android:id="@+id/image2"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/site_logo"
+        />
+        <TextView
+            android:id="@+id/clinictext"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            style="@style/FontSizeMedium"
+            android:text="@string/clinic_name"
+            android:layout_toRightOf="@+id/image2"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/clinictime"
+            android:layout_width="100dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="Clinic Time:"
+            android:layout_toRightOf="@+id/clinictext"
+            android:layout_marginTop="12dp"
+            android:textColor="#0079D2"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="90dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:layout_toRightOf="@+id/clinictime"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="25dp"
+            android:clickable="true"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="80dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:layout_toRightOf="@+id/time"
+            android:layout_marginTop="12dp"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="120dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="@string/user"
+            android:layout_toRightOf="@+id/home"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="80dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:layout_toRightOf="@+id/user"
+            android:layout_marginTop="12dp"
+            android:textColor="#0079D2" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/manualClinicTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/FontSizeLarge"
+            android:text="Manual Clinic Metrics"
+            android:textColor="@android:color/black"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/manualClinicTitle"
+        android:id="@+id/imagesLayout"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image10"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/piccolo_completed"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image20"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/a1c_completed"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image30"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/manual_selected"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image40"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/vaccine_normal"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image50"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/services"
+            />
+        
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/blood_pressure_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/imagesLayout"
+        >
+
+        <RelativeLayout
+            android:id="@+id/blood_pressure_layout_column_1"
+            android:layout_width="250dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:id="@+id/blood_pressure_systolic"
+            android:text="Blood Pressure Systolic"
+            android:layout_marginRight="30dp"
+            />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:id="@+id/blood_pressure_systolic_edit_box"
+            android:layout_below="@+id/blood_pressure_systolic"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:id="@+id/blood_pressure_diastolic"
+            android:layout_below="@+id/blood_pressure_systolic_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:text="Blood Pressure Diastolic"
+            />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:id="@+id/blood_pressure_diastolic_edit_box"
+            android:layout_below="@+id/blood_pressure_diastolic"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:id="@+id/heart_rate"
+            android:layout_below="@+id/blood_pressure_diastolic_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:text="Heart Rate"
+            />
+
+        <!--<EditText-->
+            <!--android:layout_width="250dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:id="@+id/heart_rate_edit_box"-->
+            <!--android:layout_below="@+id/heart_rate"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:background="@drawable/rectangular_edittext"-->
+            <!--/>-->
+        <RelativeLayout
+            android:id="@+id/heart_rate_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/heart_rate"
+            android:layout_marginTop="2dp"
+            
+            android:orientation="vertical" >
+
+            <Spinner
+                android:id="@+id/heart_rate_spinner"
+                android:entries="@array/heart_rate"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:focusable="true"
+                style="@style/AppTheme"
+                android:spinnerMode="dropdown"
+                android:focusableInTouchMode="true"
+                />
+            <!-- <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_toRightOf="@+id/heart_rate_spinner"
+                android:background="@android:color/black" />
+             <Spinner
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:entries="@array/inches"
+                android:layout_marginLeft="25dp"
+                android:focusable="true"
+                style="@style/AppTheme"
+                android:spinnerMode="dropdown"
+                android:layout_toRightOf="@+id/heart_rate_spinner"
+                android:focusableInTouchMode="true"
+                /> -->
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:id="@+id/height"
+            android:layout_below="@+id/heart_rate_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:text="Height"
+            />
+
+     <!--   <EditText
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:id="@+id/height_edit_box"
+            android:layout_below="@+id/height"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+     -->
+
+        <RelativeLayout
+            android:id="@+id/height_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/height"
+            android:layout_marginTop="2dp"
+           
+            android:orientation="vertical" >
+
+            <Spinner
+                android:id="@+id/height_spinner"
+                android:entries="@array/height_feet"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:focusable="true"
+                style="@style/AppTheme"
+                android:spinnerMode="dropdown"
+                android:focusableInTouchMode="true"
+                />
+          <!--   <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_toRightOf="@+id/height_spinner"
+                android:background="@android:color/black" /> -->
+            <Spinner
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:entries="@array/height_inches"
+                android:layout_marginLeft="10dp"
+                android:focusable="true"
+                style="@style/AppTheme"
+                android:spinnerMode="dropdown"
+                android:layout_toRightOf="@+id/height_spinner"
+                android:focusableInTouchMode="true"
+                />
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:id="@+id/weight"
+            android:layout_below="@+id/height_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:text="Weight"
+            />
+
+    <!--    <EditText
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:id="@+id/weight_edit_box"
+            android:layout_below="@+id/weight"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+    -->
+        <RelativeLayout
+            android:id="@+id/weight_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/weight"
+            android:layout_marginTop="2dp"
+            
+            android:orientation="vertical" >
+
+            <Spinner
+                android:id="@+id/weight_spinner"
+                android:entries="@array/weight_pounds"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:focusable="true"
+                style="@style/AppTheme"
+                android:spinnerMode="dropdown"
+                android:focusableInTouchMode="true"
+                />
+           <!--  <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_toRightOf="@+id/weight_spinner"
+                android:background="@android:color/black" /> -->
+            <Spinner
+                android:id="@+id/weight_ounces_spinner"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:entries="@array/weight_ounces"
+                android:layout_marginLeft="10dp"
+                android:focusable="true"
+                style="@style/AppTheme"
+                android:spinnerMode="dropdown"
+                android:layout_toRightOf="@+id/weight_spinner"
+                android:focusableInTouchMode="true"
+                />
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/blood_pressure_layout_column_2"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="100dp"
+            android:layout_toRightOf="@+id/blood_pressure_layout_column_1"
+            >
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:id="@+id/abdominal_circumference"
+            android:text="Abdominal Circumference"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            />
+
+     <!--   <EditText
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:id="@+id/abdominal_circumference_edit_box"
+            android:layout_below="@+id/abdominal_circumference"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+     -->
+            <RelativeLayout
+                android:id="@+id/abdominal_circumference_edit_box"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/abdominal_circumference"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical" >
+
+                <Spinner
+                    android:id="@+id/abdominal_circumference_spinner"
+                    android:entries="@array/abdominal_circumference_inches"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:focusable="true"
+                    style="@style/AppTheme"
+                    android:spinnerMode="dropdown"
+                    android:focusableInTouchMode="true"
+                    />
+               <!--  <View
+                    android:layout_width="1dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/abdominal_circumference_spinner"
+                    android:background="@android:color/black" /> -->
+                <Spinner
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:entries="@array/abdominal_circumference_decimal"
+                    android:layout_marginLeft="5dp"
+                    android:focusable="true"
+                    style="@style/AppTheme"
+                    android:spinnerMode="dropdown"
+                    android:layout_toRightOf="@+id/abdominal_circumference_spinner"
+                    android:focusableInTouchMode="true"
+                    />
+            </RelativeLayout>
+
+        <TextView
+            android:id="@+id/blood_pressure_systolic_2"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/abdominal_circumference_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="Blood Pressure Systolic-2"
+            />
+
+        <EditText
+            android:id="@+id/blood_pressure_systolic_2_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/blood_pressure_systolic_2"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/blood_pressure_diastolic_2"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/blood_pressure_systolic_2_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="Blood Pressure Diastolic-2"
+            />
+
+        <EditText
+            android:id="@+id/blood_pressure_diastolic_2_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/blood_pressure_diastolic_2"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/systolic_lowest"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/blood_pressure_diastolic_2_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="Systolic Lowest"
+            />
+
+        <EditText
+            android:id="@+id/systolic_lowest_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/systolic_lowest"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/diastolic_lowest"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/systolic_lowest_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="Diastolic Lowest"
+            />
+
+        <EditText
+            android:id="@+id/diastolic_lowest_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/diastolic_lowest"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/blood_pressure_layout_column_3"
+            android:layout_width="3500dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="100dp"
+            android:layout_toRightOf="@+id/blood_pressure_layout_column_2"
+            >
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:id="@+id/comments"
+            android:text="Comments"
+            android:layout_marginLeft="30dp"
+            />
+
+        <EditText
+            android:id="@+id/comments_edit_box"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/comments"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rectangular_edittext" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@android:color/darker_gray">
+
+        <Button
+            android:id="@+id/Close"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Close"
+            android:onClick="close"
+            android:gravity="center"
+            android:background="@android:color/darker_gray"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/BeginAnalysis"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Complete"
+            android:layout_toRightOf="@+id/Close"
+            android:gravity="center"
+            android:onClick="completeManualMetrics"
+            android:background="@android:color/holo_orange_dark"/>
+    </RelativeLayout>
+</RelativeLayout>

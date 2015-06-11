@@ -1,0 +1,266 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#007000"
+    tools:context="com.catapult.android.mca.PreClinicActivity" 
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/topBox"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="30dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/site_logo" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:text="@string/home_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="12sp" />
+
+        <GridLayout
+            android:id="@+id/gridView1"
+            android:layout_width="match_parent"
+            android:layout_height="151dp"
+            android:layout_below="@+id/textView1"
+            android:layout_margin="10dp"
+            android:background="@drawable/box"
+            android:columnCount="5" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_column="0"
+                android:layout_gravity="left"
+                android:layout_row="0"
+                android:padding="5dip"
+                android:text="Test Patient Setup"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="109dp"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="left"
+                android:layout_row="1"
+                android:ems="10"
+                android:hint="FirstName"
+                android:inputType="textPersonName"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:color="#ffffff" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:layout_gravity="right"
+                android:layout_row="1"
+                android:ems="10"
+                android:hint="LastName"
+                android:inputType="textPersonName"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:color="#ffffff" />
+
+            
+
+
+            <!--
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="1dp"
+                android:layout_column="2"
+                android:layout_row="0" />
+
+            <Space
+                android:layout_width="47dp"
+                android:layout_height="1dp"
+                android:layout_column="3"
+                android:layout_row="0" />
+            -->
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_column="1"
+                android:layout_gravity="left|top"
+                android:layout_row="3"
+                android:text="Save"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/textView5"
+                android:layout_width="109dp"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_row="3"
+                android:ems="10"
+                android:hint="DateOfBirth"
+                android:inputType="textPersonName"
+                android:onClick="showTimePickerDialog"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:color="#ffffff" />
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="151dp"
+            android:layout_below="@+id/gridView1"
+            android:layout_margin="10dp"
+            android:background="@drawable/box"
+            android:columnCount="5" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_column="0"
+                android:layout_gravity="left"
+                android:layout_row="0"
+                android:padding="5dip"
+                android:text="Clinic Staff Check-in/out"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <!--
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="109dp"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="left"
+                android:layout_row="1"
+                android:ems="10"
+                android:hint="StaffName"
+                android:inputType="textPersonName"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:color="#ffffff" >
+
+                <requestFocus />
+            </EditText>
+            -->
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="109dp"
+                android:layout_column="0"
+                android:layout_gravity="left|top"
+                android:layout_row="1"
+                android:hint="StaffName"
+                android:inputType="textPersonName"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:color="#ffffff" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:layout_gravity="right"
+                android:layout_row="1"
+                android:ems="10"
+                android:hint="StaffId"
+                android:inputType="textPersonName"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:color="#ffffff" />
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="109dp"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="left"
+                android:layout_row="2"
+                android:ems="10"
+                android:hint="PhoneNum"
+                android:inputType="textPersonName"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:color="#ffffff" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="120dp"
+                android:layout_column="1"
+                android:layout_gravity="right"
+                android:layout_row="2"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textPersonName"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:color="#ffffff" />
+        </GridLayout>
+    </RelativeLayout>
+    <!--
+<TableLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow>
+        <Button
+            android:text="table_layout_2_open" />
+        <TextView
+            android:text="table_layout_2_path_1"
+            android:padding="3dip" />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:text="table_layout_2_save_all"/>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:text="table_layout_2_save"
+            android:visibility="invisible" />
+        <TextView
+            android:text="table_layout_2_path_2"
+            android:padding="3dip" />
+    </TableRow>
+</TableLayout>
+    -->
+
+
+    <!--
+  <GridView android:id="@+id/myGrid"
+  android:layout_width="match_parent" 
+  android:layout_height="match_parent"
+    android:padding="10dp"
+    android:verticalSpacing="10dp"
+    
+    android:horizontalSpacing="10dp"
+    android:numColumns="auto_fit"
+    android:columnWidth="60dp"
+    android:stretchMode="columnWidth"
+    
+    android:gravity="center"
+    />
+    -->
+
+</RelativeLayout>

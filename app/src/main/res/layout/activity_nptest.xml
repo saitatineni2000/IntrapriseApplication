@@ -1,0 +1,527 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/top_banner"
+        android:background="@android:color/darker_gray"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/site_logo" />
+
+        <TextView
+            android:id="@+id/clinictext"
+            style="@style/FontSizeMedium"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/image2"
+            android:text="@string/clinic_name"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/clinictime"
+            style="@style/FontSizeMedium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/clinictext"
+            android:text="Clinic Time:"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/FontSizeMedium"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/clinictime"
+            android:clickable="true"
+            android:text="@string/time"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/home"
+            style="@style/FontSizeMedium"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/time"
+            android:text="@string/home"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/user"
+            style="@style/FontSizeMedium"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/home"
+            android:text="@string/user"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/logout"
+            style="@style/FontSizeMedium"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/user"
+            android:text="@string/logout"
+            android:textColor="#0079D2" />
+    </RelativeLayout>
+    
+<!--     <TextView
+        android:id="@+id/np1"
+        style="@style/FontSizeLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:text="NP"
+        android:textColor="@android:color/black" /> -->
+    
+    <RelativeLayout
+        android:id="@+id/np_top_view_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_below="@+id/top_banner"
+        android:background="@drawable/np_rectangular_box"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp" >
+    
+ 	<RelativeLayout
+            android:id="@+id/layout_column_1"
+            android:layout_width="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="20dp"
+            android:id="@+id/height"
+            android:text="Ht:5'0"
+            android:layout_marginRight="30dp"
+            />
+
+        
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:id="@+id/weight"
+            android:layout_below="@+id/height"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="30dp"
+            android:text="Wt: 185"
+            />
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="20dp"
+            android:id="@+id/ibw"
+            android:layout_below="@+id/weight"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="IBW:137 - 184"
+            />
+
+       
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="20dp"
+            android:id="@+id/waist"
+            android:layout_below="@+id/ibw"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="30dp"
+            android:text="Waist: 32"
+            />
+
+    
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="20dp"
+            android:id="@+id/bmi"
+            android:layout_below="@+id/waist"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="30dp"
+            android:text="BMI: 25.1"
+            />
+
+        </RelativeLayout>
+        
+ 		 <RelativeLayout
+            android:id="@+id/layout_column_2"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/layout_column_1"
+            >
+
+		        <TextView
+		            android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/BP"
+		            android:text="BP: 115/65"
+		           android:layout_marginStart="30dp"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a22"
+		            android:text="BP: 115/65"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/BP"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a23"
+		            android:text="HR: 65"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a22"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a24"
+		            android:text="CHOL: 320"
+		            android:textColor="@android:color/holo_red_dark"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a23"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a25"
+		            android:text="LDL: 37"
+		            android:layout_marginTop="0dp"
+		             android:textColor="@android:color/holo_green_dark"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a24"
+		            />
+		        <TextView
+		            android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a26"
+		            android:text="TRIG: 37"
+		             android:layout_marginTop="0dp"
+		             android:textColor="@android:color/holo_green_dark"
+            		android:layout_marginStart="30dp"
+            		android:layout_below="@+id/a25"
+		            />
+        
+        </RelativeLayout>
+        
+ 		 <RelativeLayout
+            android:id="@+id/layout_column_3"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+           android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/layout_column_2"
+            >
+
+		        <TextView
+		            android:layout_width="90dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a31"
+		            android:text="FASTING: YES"
+		           android:layout_marginStart="30dp"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a32"
+		            android:text="BP: 115/65"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a31"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a33"
+		            android:text="HR: 65"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a32"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a34"
+		            android:text="CHOL: 320"
+		            android:textColor="@android:color/holo_red_dark"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a33"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a35"
+		            android:text="LDL: 37"
+		             android:layout_marginTop="0dp"
+		             android:textColor="@android:color/holo_green_dark"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a34"
+		            />
+		        <TextView
+		            android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a36"
+		            android:text="TRIG: 37"
+		            android:layout_marginTop="0dp"
+		             android:textColor="@android:color/holo_green_dark"
+            		android:layout_marginStart="30dp"
+            		android:layout_below="@+id/a35"
+		            />
+        
+        </RelativeLayout>
+        
+ 		 <RelativeLayout
+            android:id="@+id/layout_column_4"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+           android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/layout_column_3"
+            >
+
+		        <TextView
+		            android:layout_width="90dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a41"
+		            android:text="FASTING: YES"
+		           android:layout_marginStart="30dp"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a42"
+		            android:text="BP: 115/65"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a41"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a43"
+		            android:text="HR: 65"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a42"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a44"
+		            android:text="CHOL: 320"
+		            android:textColor="@android:color/holo_red_dark"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a43"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a45"
+		            android:text="LDL: 37"
+		            android:layout_marginTop="0dp"
+		             android:textColor="@android:color/holo_green_dark"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a44"
+		            />
+		        <TextView
+		            android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a46"
+		            android:text="TRIG: 37"
+		            android:layout_marginTop="0dp"
+		             android:textColor="@android:color/holo_green_dark"
+            		android:layout_marginStart="30dp"
+            		android:layout_below="@+id/a45"
+		            />
+        
+        </RelativeLayout>
+        
+ 		 <RelativeLayout
+            android:id="@+id/layout_column_5"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+           android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/layout_column_4"
+            >
+
+		        <TextView
+		            android:layout_width="90dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a51"
+		            android:text="FASTING: YES"
+		           android:layout_marginStart="30dp"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a52"
+		            android:text="BP: 115/65"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a51"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a53"
+		            android:text="HR: 65"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a52"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a54"
+		            android:text="CHOL: 320"
+		            android:textColor="@android:color/holo_red_dark"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a53"
+		            />
+		        
+		        <TextView
+		             android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a55"
+		            android:text="LDL: 37"
+		            android:layout_marginTop="0dp"
+		             android:textColor="@android:color/holo_green_dark"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a54"
+		            />
+		        <TextView
+		            android:layout_width="75dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a56"
+		            android:text="TRIG: 37"
+		            android:layout_marginTop="0dp"
+		             android:textColor="@android:color/holo_green_dark"
+            		android:layout_marginStart="30dp"
+            		android:layout_below="@+id/a55"
+		            />
+        
+        </RelativeLayout>
+        
+ 		 <RelativeLayout
+            android:id="@+id/layout_column_6"
+            android:layout_width="270dp"
+            android:layout_height="match_parent"
+           android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/layout_column_5"
+            >
+
+		        <TextView
+		            android:layout_width="150dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a61"
+		            android:text="Hx Lipidemia: NO"
+		           android:layout_marginStart="30dp"
+		            />
+		        
+		        <TextView
+		             android:layout_width="150dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a62"
+		            android:text="Lipid Meds: No"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a61"
+		            />
+		        
+		        <TextView
+		             android:layout_width="230dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a63"
+		            android:text="LAST BLOOD WORK: 3-12 months"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a62"
+		            />
+		        
+		        <TextView
+		             android:layout_width="150dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a64"
+		            android:text="CHOL: 320"
+		            android:textColor="@android:color/holo_red_dark"
+		            android:layout_marginTop="0dp"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a63"
+		            />
+		        
+		        <TextView
+		             android:layout_width="150dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a65"
+		            android:text="LDL: 37"
+		            android:layout_marginTop="0dp"
+		             android:textColor="@android:color/holo_green_dark"
+            		android:layout_marginStart="30dp"
+		             android:layout_below="@+id/a64"
+		            />
+		        <TextView
+		            android:layout_width="150dp"
+            		android:layout_height="20dp"
+		            android:id="@+id/a66"
+		            android:text="Framingham: 1"
+		            android:layout_marginTop="0dp"
+		             android:textColor="@android:color/holo_green_dark"
+            		android:layout_marginStart="30dp"
+            		android:layout_below="@+id/a65"
+		            />
+        
+        </RelativeLayout>
+    
+    </RelativeLayout>
+    
+ </LinearLayout>

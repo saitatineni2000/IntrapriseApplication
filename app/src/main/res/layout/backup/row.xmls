@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/Appt"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Type"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Lastname"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Firstname"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Patientid"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Language"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/HQ"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/HE"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/NP"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/FLUSHOT"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/TDAP"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+
+    <TextView
+        android:id="@+id/Team"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_weight="1"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Alerts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_weight="1"
+        android:text="" />
+
+</LinearLayout>

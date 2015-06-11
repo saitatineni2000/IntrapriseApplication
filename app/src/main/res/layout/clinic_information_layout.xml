@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/clinic_information_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        android:layout_marginLeft="30dp"
+        >
+		
+        <TextView
+            android:id="@+id/clinictext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/FontSizeLarge"
+            android:text="CLINIC INFORMATION"
+            android:textColor="@android:color/black"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/clinictext" 
+            android:background="@android:color/black"         
+            />
+
+        <TextView
+            android:id="@+id/clinic_name"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:text="Clinic Name"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <EditText
+            android:id="@+id/clinic_name_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/clinic_name"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/mailing_address_1"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/clinic_name_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:text="Mailing Address 1"
+            />
+
+        <EditText
+            android:id="@+id/mailing_address_1_edit_box"
+            android:layout_below="@+id/mailing_address_1"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/mailing_address_2"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/mailing_address_1_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:text="Mailing Address 2"
+            />
+
+        <EditText
+            android:id="@+id/mailing_address_2_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/mailing_address_2"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/mailing_address_2_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:text="City"
+            />
+
+        <EditText
+            android:id="@+id/city_edit_box"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/city"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="85dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/city_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:text="State"
+            />
+
+        <EditText
+            android:id="@+id/state_edit_box"
+            android:layout_width="85dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/state"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/zip_code"
+            android:layout_width="85dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/city_edit_box"
+            android:layout_toRightOf="@+id/state"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:text="Zip Code"
+            />
+
+        <EditText
+            android:id="@+id/zip_code_edit_box"
+            android:layout_width="85dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/zip_code"
+            android:layout_toRightOf="@+id/state_edit_box"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/main_phone"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:text="Main Phone"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@+id/clinic_name"
+            />
+
+        <EditText
+            android:id="@+id/main_phone_edit_box"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/main_phone"
+            android:layout_toRightOf="@+id/clinic_name_edit_box"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/cell_phone"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/main_phone_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="80dp"
+            android:text="Cell phone"
+            android:layout_toRightOf="@+id/mailing_address_1"
+            />
+
+        <EditText
+            android:id="@+id/cell_phone_edit_box"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/cell_phone"
+            android:layout_toRightOf="@+id/mailing_address_1_edit_box"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/cell_phone_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="80dp"
+            android:text="Email"
+            android:layout_toRightOf="@+id/mailing_address_1"
+            />
+
+        <EditText
+            android:id="@+id/email_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/email"
+            android:layout_toRightOf="@+id/mailing_address_1_edit_box"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/date_from"
+            android:layout_width="85dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/email_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="80dp"
+            android:text="Date From"
+            android:layout_toRightOf="@+id/city"
+            />
+
+        <EditText
+            android:id="@+id/date_from_edit_box"
+            android:layout_width="85dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/date_from"
+            android:layout_toRightOf="@+id/city_edit_box"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/date_to"
+            android:layout_width="85dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/email_edit_box"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:text="Date To"
+            android:layout_toRightOf="@+id/date_from"
+            />
+
+        <EditText
+            android:id="@+id/date_to_edit_box"
+            android:layout_width="85dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/date_to"
+            android:layout_toRightOf="@+id/date_from_edit_box"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/services"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:text="Services"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@+id/main_phone"
+            />
+
+        <CheckBox
+            android:id="@+id/wellness_check_box"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/main_phone"
+            android:layout_below="@+id/services"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="80dp"
+            />
+        <TextView
+            android:id="@+id/wellness"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/services"
+            android:layout_toRightOf="@+id/wellness_check_box"
+            android:text="Wellness"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+
+            />
+
+        <CheckBox
+            android:id="@+id/vaccines_check_box"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/main_phone"
+            android:layout_below="@+id/wellness_check_box"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="80dp"
+            />
+        <TextView
+            android:id="@+id/vaccines"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/wellness"
+            android:layout_toRightOf="@+id/vaccines_check_box"
+            android:text="Vaccines"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="10dp"
+
+            />
+
+        <CheckBox
+            android:id="@+id/other_service_1_check_box"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/main_phone"
+            android:layout_below="@+id/vaccines_check_box"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="80dp"
+            />
+        <TextView
+            android:id="@+id/other_service_1"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/vaccines"
+            android:layout_toRightOf="@+id/vaccines_check_box"
+            android:text="Other Services 1"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+
+            />
+        <CheckBox
+            android:id="@+id/other_service_2_check_box"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/main_phone"
+            android:layout_below="@+id/other_service_1_check_box"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="80dp"
+            />
+        <TextView
+            android:id="@+id/other_service_2"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/other_service_1"
+            android:layout_toRightOf="@+id/other_service_2_check_box"
+            android:text="Other Service 2"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+
+            />
+
+        <TextView
+            android:id="@+id/np_room"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:text="NP Room"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@+id/email"
+            android:layout_below="@+id/other_service_2_check_box"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/np_room_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/np_room"
+            android:layout_toRightOf="@+id/email"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/clinic_room"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:text="Clinic Room"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@+id/email"
+            android:layout_below="@+id/np_room_edit_box"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/clinic_room_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/clinic_room"
+            android:layout_toRightOf="@+id/email"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <Button
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Ok"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_below="@+id/clinic_room_edit_box"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="425dp"
+            />
+
+        <ImageView
+            android:id="@+id/closeDialog"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/dialog_close" 
+            />
+        
+</RelativeLayout>
+
+

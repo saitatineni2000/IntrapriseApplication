@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@android:color/darker_gray" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/site_logo" />
+
+        <TextView
+            android:id="@+id/clinictext"
+            style="@style/FontSizeMedium"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/logo"
+            android:text="@string/clinic_name"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/clinictime"
+            style="@style/FontSizeMedium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/clinictext"
+            android:text="Clinic Time:"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/FontSizeMedium"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/clinictime"
+            android:clickable="true"
+            android:text="@string/time"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/home"
+            style="@style/FontSizeMedium"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/time"
+            android:text="@string/home"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/user"
+            style="@style/FontSizeMedium"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/home"
+            android:text="@string/user"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/logout"
+            style="@style/FontSizeMedium"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/user"
+            android:text="@string/logout"
+            android:textColor="#0079D2" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/vaccine_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/FontSizeLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vaccine"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/imagesLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vaccine_title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/image10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="90dp"
+            android:src="@drawable/piccolo_completed" />
+
+        <ImageView
+            android:id="@+id/image20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="90dp"
+            android:src="@drawable/a1c_completed" />
+
+        <ImageView
+            android:id="@+id/image30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="90dp"
+            android:src="@drawable/manual_completed" />
+
+        <ImageView
+            android:id="@+id/image40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="90dp"
+            android:src="@drawable/vaccine_selected" />
+
+        <ImageView
+            android:id="@+id/image50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="90dp"
+            android:src="@drawable/services" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagesLayout"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/questionnaire_line1"
+            style="@style/FontSizeSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The following questions will help us determine if there is any reason we should give you an inactivated injectable vaccination today."
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/questionnaire_line2"
+            style="@style/FontSizeSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/questionnaire_line1"
+            android:layout_marginRight="10dp"
+            android:text="If you answer &apos;&apos;yes&apos;&apos; to any question, it does not necessarily mean you should not be vaccinated. It just means additional questions must be asked."
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/questionnaire_line3"
+            style="@style/FontSizeSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/questionnaire_line2"
+            android:layout_marginRight="20dp"
+            android:text="If a question is not clear, please ask your healthcare provider to explain it"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_content">
+
+        <LinearLayout
+            android:id="@+id/questionnaire_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/questions"
+            style="@style/FontSizeSmall"
+            android:layout_width="900dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:text="Questions:"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/yes"
+            style="@style/FontSizeSmall"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/questions"
+            android:text="YES"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/no"
+            style="@style/FontSizeSmall"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@+id/yes"
+            android:text="NO"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/dont_know"
+            style="@style/FontSizeSmall"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/no"
+            android:layout_marginTop="20dp"
+            android:text="Don&apos;t Know"
+            android:textColor="@android:color/black" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/questionnaire_box1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/questionnaire_box">
+
+            <TextView
+                android:id="@+id/questionnaire_1"
+                style="@style/FontSizeSmall"
+                android:layout_width="900dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_edittext"
+                android:gravity="fill"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="40dp"
+                android:text="1. Are you sick today?"
+                android:textColor="@android:color/black" />
+
+            <RadioGroup
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/checkbox_yes_1"
+                    android:layout_width="35dp"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_no_1"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_dont_know_1"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/questionnaire_box2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/questionnaire_box1">
+
+            <TextView
+                android:id="@+id/questionnaire_2"
+                style="@style/FontSizeSmall"
+                android:layout_width="900dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_edittext"
+                android:gravity="fill"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="40dp"
+                android:text="2. Do you have any allergies to a vaccine component or latex?"
+                android:textColor="@android:color/black" />
+
+            <RadioGroup
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/checkbox_yes_2"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_no_2"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_dont_know_2"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/questionnaire_box3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/questionnaire_box2">
+
+            <TextView
+                android:id="@+id/questionnaire_3"
+                style="@style/FontSizeSmall"
+                android:layout_width="900dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_edittext"
+                android:gravity="fill"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="40dp"
+                android:text="3. Have you ever had a serious reaction after receiving a vaccination?"
+                android:textColor="@android:color/black" />
+
+            <RadioGroup
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/checkbox_yes_3"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_no_3"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_dont_know_3"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/questionnaire_box4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/questionnaire_box3">
+
+            <TextView
+                android:id="@+id/questionnaire_4"
+                style="@style/FontSizeSmall"
+                android:layout_width="900dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_edittext"
+                android:gravity="fill"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="40dp"
+                android:text="4. Have you had Guillain-Barre syndrome or any other nervous system problems?"
+                android:textColor="@android:color/black" />
+
+            <RadioGroup
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/checkbox_yes_4"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_no_4"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_dont_know_4"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/questionnaire_box5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/questionnaire_box4">
+
+            <TextView
+                android:id="@+id/questionnaire_5"
+                style="@style/FontSizeSmall"
+                android:layout_width="900dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_edittext"
+                android:gravity="fill"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="40dp"
+                android:text="5. Do you have a long-term health problem with heart disease, lung disease (Asthma, COPD), kidney disease, diabetes, anemia or other blood disorders?"
+                android:textColor="@android:color/black" />
+
+            <RadioGroup
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/checkbox_yes_5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_no_5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_dont_know_5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/questionnaire_box6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/questionnaire_box5">
+
+            <TextView
+                android:id="@+id/questionnaire_6"
+                style="@style/FontSizeSmall"
+                android:layout_width="900dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_edittext"
+                android:gravity="fill"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="40dp"
+                android:text="6. Do you have cancer, HIV/AIDS, or any other immune system problem?"
+                android:textColor="@android:color/black" />
+
+            <RadioGroup
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/checkbox_yes_6"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_no_6"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_dont_know_6"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/questionnaire_box7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/questionnaire_box6">
+
+            <TextView
+                android:id="@+id/questionnaire_7"
+                style="@style/FontSizeSmall"
+                android:layout_width="900dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangular_edittext"
+                android:gravity="fill"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="40dp"
+                android:text="7. For Women: Are you pregrant or is there a chance you could become pregrant during next month?"
+                android:textColor="@android:color/black" />
+
+            <RadioGroup
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/checkbox_yes_7"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_no_7"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_dont_know_7"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:onClick="nextScreen"
+            android:layout_toRightOf="@+id/dont_know_check_box"
+            android:src="@drawable/arrow_circle_right" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+

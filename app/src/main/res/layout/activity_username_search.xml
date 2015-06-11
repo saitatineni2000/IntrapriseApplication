@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.catapult.android.mca.UsernameSearchActivity" >
+
+    
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:ems="14"
+        android:hint="@string/Username" />
+
+   
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_alignStart="@+id/imageView1"
+        android:layout_marginBottom="27dp"
+        android:text="@string/login_title"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="50dp"
+        android:background="@color/orange"
+        android:onClick="searchUser"
+        android:text="@string/Search" />
+		
+    <View
+        android:id="@+id/myRectangleView"
+        android:layout_width="350dp"
+        android:layout_height="175dp"
+        android:layout_alignTop="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/square_login" />  
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:layout_above="@+id/textView1"
+        android:layout_alignStart="@+id/imageView1"
+        android:layout_marginBottom="22dp"
+        android:background="@android:color/black" />
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" 
+        android:background="@color/gray">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="415dp"
+            android:clickable="true"
+            android:text="@string/username_search_title"
+            android:textSize="25sp"
+            android:textColor="@android:color/white" />
+
+    </TableRow>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignStart="@+id/myRectangleView"
+        android:layout_below="@+id/tableRow1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:contentDescription="@string/sitelogo"
+        android:src="@drawable/site_logo" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignEnd="@+id/button1"
+        android:layout_alignRight="@+id/imageView1"
+        android:background="@color/orange"
+        android:onClick="cancel"
+        android:text="@string/Cancel" />
+
+    <TextView
+        android:id="@+id/username_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText1"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignEnd="@+id/myRectangleView"
+        android:layout_toRightOf="@+id/myRectangleView"
+        android:padding="10dip"
+        android:textColor="#e30000"
+        android:textStyle="bold" />
+    
+</RelativeLayout>

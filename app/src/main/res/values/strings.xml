@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Catapult Mobile Clinic Application</string>
+    <string name="team_lead_home">Team Lead Home</string>
+    <string name="health_tech_home">Health Tech Home</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="register_title">Register New Patient</string>
+    <string name="login_title">Mobile Clinic Application</string>
+    <string name="username_search_title">Reset Password - Login Search</string>
+    <string name="home_title">Catapult Mobile Clinic Application</string>
+    <string name="name">Name</string>
+    <string name="Username">Username</string>
+    <string name="TeamLeadUsername">Team Lead User Name</string>
+    <string name="EnterNewPassword">New Password</string>
+    <string name="ReEnterNewPassword">Confirm Password</string>
+    <string name="Password">Password</string>
+    <string name="TeamLeadPassword">Team Lead Password</string>
+    <string name="btnRegister">Its Easy!</string>
+    <string name="btnLogin">Login</string>
+    <string name="spinner_title">PatientList</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="password_reset_1"><b>Reset Password - Team Lead Login</b></string>
+    <string name="ResetTeamLeadRequest">Ask a team lead to login for password setup or login to change password!</string>
+    <string name="password_reset_2"><b>Reset Password</b></string>
+    <string name="Login">SIGN IN</string>
+    <string name="Search">SEARCH</string>
+    <string name="Cancel">CANCEL</string>
+    <string name="Reset">RESET</string>
+    <string name="sitelogo">Catapult Site Logo Image</string>
+    <string name="title_activity_pre_clinic">PreClinicActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="help">Help</string>
+    <string name="title_activity_clinic_patient_view">ClinicPatientViewActivity</string>
+    <string name="title_activity_patient_details">Patient Details</string>
+    <string name="sushi">Sushi</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="kappa_roll">Kappa Roll</string>
+    <string name="caterpillar_roll">Caterpillar Roll</string>
+    <string name="kappa_roll_desc">Cucumber</string>
+    <string name="caterpillar_roll_desc">Eel, Cucumber and Avocado. Tobiko on top.</string>
+    <string name="kappa_roll_price">$3.95</string>
+    <string name="caterpillar_roll_price">$9.95</string>
+    <string name="title_activity_reset_password">Reset Password</string>
+    <string name="title_activity_password_reset_activity2">Password Reset</string>
+    <string name="title_activity_username_search">Login Username Search</string>
+    <string name="title_activity_team_lead_home">Team Lead Home</string>
+    <string name="title_activity_health_tech_home">Health Tech Home</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_patient_verification">Patient Verification</string>
+    <string name="title_activity_piccolo_setup">Piccolo Setup</string>
+    <string name="title_activity_a1c">A1c</string>
+    <string name="title_activity_patient_list">PatientList</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="clinic_name"><u>xyz clinic(05/18/2015) 123 Main Street, Dallas TX 75231</u></string>
+    <string name="home"><u>Home</u></string>
+    <string name="logout"><u>Logout</u></string>
+    <string name="time"><u>6:54 pm</u></string>
+    <string name="user"><u>Jason Mason</u></string>
+    <string name="hint_first_name"><font size="13">Enter First Name</font></string>
+    <string name="hint_last_name"><font size="13">Enter Last Name</font></string>
+    <string name="hint_date"><font size="13">00/00/0000</font></string>
+    <string name="search"><font size="13">Search</font></string>
+    <string name="title_activity_clinic_schedule">ClinicScheduleActivity</string>
+    <string name="nullstring"></string>
+    <string name="title_activity_manual_clinical_metrics">Manual Clinical Metrics</string>
+    <string name="title_activity_patient_detail_info">Patient Details</string>
+
+    <string-array name="heart_rate">
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+        <item>110</item>
+        <item>120</item>
+        <item>130</item>
+        <item>140</item>
+        <item>150</item>
+    </string-array>
+    <string-array name="height_feet">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="height_inches">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="abdominal_circumference_inches">
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+    </string-array>
+    <string-array name="abdominal_circumference_decimal">
+        <item>.25</item>
+        <item>0.5</item>
+        <item>0.75</item>
+    </string-array>
+    <string-array name="weight_pounds">
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+        <item>110</item>
+        <item>120</item>
+        <item>130</item>
+        <item>140</item>
+        <item>150</item>
+        <item>160</item>
+        <item>170</item>
+        <item>180</item>
+        <item>190</item>
+        <item>200</item>
+        <item>210</item>
+        <item>220</item>
+    </string-array>
+    <string-array name="weight_ounces">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+    <string name="title_activity_nptest">NPTestActivity</string>
+    <string name="title_activity_ht__vaccine__yes__no_">Vaccine Confirmation</string>
+    <string name="title_activity_ht__vaccine__questionnaire_">Vaccine Questionnaire</string>
+    <string name="title_activity_ht__vaccine__pat__signature_">Vaccine Patient Signature</string>
+    <string name="title_activity_ht__vaccine__complete_">Vaccine Final Step</string>
+    <string name="title_activity_ht__manual__piccolo_">Manual Piccolo Clinical Data</string>
+    <string name="title_activity_ht__additional__services_">HT Additional Services</string>
+    <string name="title_activity_tl__staff_">TL_Staff_Activity</string>
+
+</resources>

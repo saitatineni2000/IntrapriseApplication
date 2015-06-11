@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/header"
+        android:background="@android:color/darker_gray"
+        >
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/site_logo"
+            />
+        <TextView
+            android:id="@+id/clinictext"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            style="@style/FontSizeMedium"
+            android:text="@string/clinic_name"
+            android:layout_toRightOf="@+id/image2"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/clinictime"
+            android:layout_width="100dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="Clinic Time:"
+            android:layout_toRightOf="@+id/clinictext"
+            android:layout_marginTop="12dp"
+            android:textColor="#0079D2"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="90dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:layout_toRightOf="@+id/clinictime"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="25dp"
+            android:clickable="true"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="80dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:layout_toRightOf="@+id/time"
+            android:layout_marginTop="12dp"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="120dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="@string/user"
+            android:layout_toRightOf="@+id/home"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="80dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:layout_toRightOf="@+id/user"
+            android:layout_marginTop="12dp"
+            android:textColor="#0079D2" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/patient_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/patientInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/FontSizeLarge"
+            android:text="Patient Information"
+            android:textColor="@android:color/black"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/patient_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/patient_information">
+
+        <RelativeLayout
+            android:id="@+id/first_column"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/patient_info_first_name"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="First Name"
+            android:layout_marginRight="15dp"
+            />
+
+        <EditText
+            android:id="@+id/first_name_edit_text"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_first_name"
+            android:scrollHorizontally="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_middle_name"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="MI"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/patient_info_first_name"
+            />
+
+        <EditText
+            android:id="@+id/middle_name_edit_text"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_first_name"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rectangular_edittext"
+            android:layout_toRightOf="@+id/first_name_edit_text"
+            android:layout_marginRight="15dp"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_last_name"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Last Name"
+            android:layout_marginRight="50dp"
+            android:layout_toRightOf="@+id/patient_info_middle_name"
+            />
+
+        <EditText
+            android:id="@+id/last_name_edit_text"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:scrollHorizontally="true"
+            android:layout_below="@+id/patient_info_last_name"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rectangular_edittext"
+            android:layout_toRightOf="@+id/middle_name_edit_text"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_dob"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Date of Birth"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/first_name_edit_text"
+            android:layout_marginRight="280dp"
+            />
+
+        <EditText
+            android:id="@+id/dob_edit_text"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_dob"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <ImageButton
+            android:id="@+id/calendar_image_button"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/dob_edit_text"
+            android:layout_below="@+id/patient_info_dob"
+            android:layout_marginRight="215dp"
+            android:src="@drawable/calendar"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_gender"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Gender"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/dob_edit_text"
+            android:layout_marginRight="280dp"
+            />
+
+       <RadioGroup
+           android:id="@+id/radioGender"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/patient_info_gender"
+           android:layout_marginTop="5dp"
+           android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:layout_marginRight="15dp"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/patient_info_preferred_language"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Preferred Language"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/radioGender"
+            android:layout_marginRight="280dp"
+            />
+<!--
+        <EditText
+            android:id="@+id/preferred_language_edit_text"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_preferred_language"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <ImageView
+            android:id="@+id/language_drop_down"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/preferred_language_edit_text"
+            android:layout_marginRight="250dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:layout_below="@+id/patient_info_preferred_language"
+            android:background="@drawable/downarrow"/>
+ -->
+            <LinearLayout
+                android:id="@+id/preferred_language_spinner"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/patient_info_preferred_language"
+                android:background="@drawable/spinner_background"
+                android:orientation="vertical" >
+
+                <Spinner
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:focusable="true"
+                    style="@style/AppTheme"
+                    android:spinnerMode="dropdown"
+                    android:ems="10"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+
+        <TextView
+            android:id="@+id/patient_info_email"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Receipient Name"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/preferred_language_spinner"
+            android:layout_marginRight="280dp"
+            />
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_email"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="130dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_column"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/first_column"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/patient_info_mailing_address1"
+            android:layout_width="400dp"
+            android:layout_height="20dp"
+            android:text="Mailing Address 1"
+            android:layout_marginRight="50dp"
+            />
+
+        <EditText
+            android:id="@+id/mailing_address1_edit_text"
+            android:layout_width="400dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_mailing_address1"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_mailing_address2"
+            android:layout_width="400dp"
+            android:layout_height="20dp"
+            android:text="Mailing Address 2"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/mailing_address1_edit_text"
+            />
+
+        <EditText
+            android:id="@+id/mailing_address2_edit_text"
+            android:layout_width="400dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_mailing_address2"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_city"
+            android:layout_width="280dp"
+            android:layout_height="20dp"
+            android:text="City"
+            android:layout_marginRight="170dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/mailing_address2_edit_text"
+            />
+
+        <EditText
+            android:id="@+id/city_edit_text"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_city"
+            android:layout_marginRight="170dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_state"
+            android:layout_width="130dp"
+            android:layout_height="20dp"
+            android:text="State"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/city_edit_text"
+            />
+<!--
+        <EditText
+            android:id="@+id/state_edit_text"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_state"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <ImageView
+            android:id="@+id/state_drop_down"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/state_edit_text"
+            android:layout_below="@+id/patient_info_state"
+            android:layout_marginRight="55dp"
+            android:clickable="true"
+            android:background="@drawable/downarrow"/>
+-->
+            <LinearLayout
+                android:id="@+id/state_spinner"
+                android:layout_width="140dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/patient_info_state"
+                android:background="@drawable/spinner_background"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical" >
+
+                <Spinner
+                    android:layout_width="140dp"
+                    android:layout_height="35dp"
+                    android:focusable="true"
+                    style="@style/AppTheme"
+                    android:spinnerMode="dropdown"
+                    android:ems="10"
+                    android:focusableInTouchMode="true"
+                    />
+            </LinearLayout>
+        <TextView
+            android:id="@+id/patient_info_zipcode"
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:text="Zip code"
+            android:layout_marginRight="175dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/patient_info_state"
+            android:layout_below="@+id/city_edit_text"
+            />
+
+        <EditText
+            android:id="@+id/zipcode_edit_text"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_zipcode"
+            android:layout_marginRight="175dp"
+            android:background="@drawable/rectangular_edittext"
+            android:layout_toRightOf="@+id/state_spinner"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_primary_phone"
+            android:layout_width="280dp"
+            android:layout_height="20dp"
+            android:text="Primary Phone"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/state_spinner"
+            />
+
+        <EditText
+            android:id="@+id/primary_phone_edit_text"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_primary_phone"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_secondary_phone"
+            android:layout_width="280dp"
+            android:layout_height="20dp"
+            android:text="Secondary Phone"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/primary_phone_edit_text"
+            />
+
+
+        <EditText
+            android:id="@+id/secondary_phone_edit_text"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_secondary_phone"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/third_column"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/second_column">
+
+        <TextView
+            android:id="@+id/patient_info_ssn"
+            android:layout_width="320dp"
+            android:layout_height="20dp"
+            android:text="SSN"
+            android:layout_marginRight="50dp"
+            />
+
+        <EditText
+            android:id="@+id/ssn_edit_text"
+            android:layout_width="320dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="50dp"
+            android:layout_below="@+id/patient_info_ssn"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_groupid"
+            android:layout_width="320dp"
+            android:layout_height="20dp"
+            android:text="Group ID"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_below="@+id/ssn_edit_text"
+            />
+
+        <EditText
+            android:id="@+id/groupid_edit_text"
+            android:layout_width="320dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_groupid"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_memberid"
+            android:layout_width="320dp"
+            android:layout_height="20dp"
+            android:text="Member ID"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_below="@+id/groupid_edit_text"
+            />
+
+        <EditText
+            android:id="@+id/memberid_edit_text"
+            android:layout_width="320dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_memberid"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_effectivedate"
+            android:layout_width="180dp"
+            android:layout_height="20dp"
+            android:text="Effective Date"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_below="@+id/memberid_edit_text"
+            />
+
+        <EditText
+            android:id="@+id/effectivedate_edit_text"
+            android:layout_width="180dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_effectivedate"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+        <TextView
+            android:id="@+id/patient_info_employeeid"
+            android:layout_width="320dp"
+            android:layout_height="20dp"
+            android:text="Employee ID"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_below="@+id/effectivedate_edit_text"
+            />
+
+        <EditText
+            android:id="@+id/employeeid_edit_text"
+            android:layout_width="320dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_employeeid"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+
+        <TextView
+            android:id="@+id/patient_info_relationship"
+            android:layout_width="320dp"
+            android:layout_height="20dp"
+            android:text="Relationship"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_below="@+id/employeeid_edit_text"
+            />
+
+        <EditText
+            android:id="@+id/relationship_edit_text"
+            android:layout_width="320dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/patient_info_relationship"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rectangular_edittext"
+            />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center|start"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/darker_gray">
+
+        <Button
+            android:id="@+id/patient_info_save"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Save"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:onClick="cancel"
+            android:background="@android:color/holo_orange_dark"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/patient_info_cancel"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Cancel"
+            android:layout_toRightOf="@+id/patient_info_save"
+            android:gravity="center"
+            android:onClick="cancel"
+            android:background="#929292"/>
+    </RelativeLayout>
+</RelativeLayout>

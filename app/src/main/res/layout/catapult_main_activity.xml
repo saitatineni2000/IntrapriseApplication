@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@android:color/darker_gray"
+        >
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/site_logo"
+            />
+        <TextView
+            android:id="@+id/clinictext"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            style="@style/FontSizeMedium"
+            android:text="@string/clinic_name"
+            android:layout_toRightOf="@+id/image2"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/clinictime"
+            android:layout_width="100dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="Clinic Time:"
+            android:layout_toRightOf="@+id/clinictext"
+            android:layout_marginTop="12dp"
+            android:textColor="#0079D2"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="90dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:layout_toRightOf="@+id/clinictime"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="25dp"
+            android:clickable="true"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="80dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:layout_toRightOf="@+id/time"
+            android:layout_marginTop="12dp"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="120dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="@string/user"
+            android:layout_toRightOf="@+id/home"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="80dp"
+            style="@style/FontSizeMedium"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:layout_toRightOf="@+id/user"
+            android:layout_marginTop="12dp"
+            android:textColor="#0079D2" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/frament_kept_layout"
+        android:layout_below="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </RelativeLayout>
+
+</RelativeLayout>

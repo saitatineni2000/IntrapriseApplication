@@ -1,0 +1,387 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@android:color/darker_gray" >
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/site_logo" />
+
+        <TextView
+            android:id="@+id/clinictext"
+            style="@style/FontSizeMedium"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/image2"
+            android:text="@string/clinic_name"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/clinictime"
+            style="@style/FontSizeMedium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/clinictext"
+            android:text="Clinic Time:"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/FontSizeMedium"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/clinictime"
+            android:clickable="true"
+            android:text="@string/time"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/home"
+            style="@style/FontSizeMedium"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/time"
+            android:text="@string/home"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/user"
+            style="@style/FontSizeMedium"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/home"
+            android:text="@string/user"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/logout"
+            style="@style/FontSizeMedium"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/user"
+            android:text="@string/logout"
+            android:textColor="#0079D2" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/manualClinicTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/FontSizeLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manual Clinic Metrics"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/imagesLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/manualClinicTitle"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/image10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/piccolo" />
+
+        <ImageView
+            android:id="@+id/image20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/a1c" />
+
+        <ImageView
+            android:id="@+id/image30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/manual_metrics" />
+
+        <ImageView
+            android:id="@+id/image40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/vaccine" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/blood_pressure_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagesLayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp" >
+
+        <TextView
+            android:id="@+id/blood_pressure_systolic"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="30dp"
+            android:text="Blood Pressure Systolic" />
+
+        <EditText
+            android:id="@+id/blood_pressure_systolic_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/blood_pressure_systolic"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rectangular_edittext" />
+
+        <TextView
+            android:id="@+id/blood_pressure_diastolic"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/blood_pressure_systolic_edit_box"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Blood Pressure Diastolic" />
+
+        <EditText
+            android:id="@+id/blood_pressure_diastolic_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/blood_pressure_diastolic"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rectangular_edittext" />
+
+        <TextView
+            android:id="@+id/heart_rate"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/blood_pressure_diastolic_edit_box"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Heart Rate" />
+
+        <EditText
+            android:id="@+id/heart_rate_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/heart_rate"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rectangular_edittext" />
+
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/heart_rate_edit_box"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Height" />
+
+        <EditText
+            android:id="@+id/height_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/height"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rectangular_edittext" />
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/height_edit_box"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Weight" />
+
+        <EditText
+            android:id="@+id/weight_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/weight"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rectangular_edittext" />
+
+        <TextView
+            android:id="@+id/abdominal_circumference"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/blood_pressure_systolic"
+            android:text="Abdominal Circumference" />
+
+        <EditText
+            android:id="@+id/abdominal_circumference_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/abdominal_circumference"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/blood_pressure_systolic_edit_box"
+            android:background="@drawable/rectangular_edittext" />
+
+        <TextView
+            android:id="@+id/blood_pressure_systolic_2"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/abdominal_circumference_edit_box"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/blood_pressure_diastolic"
+            android:text="Blood Pressure Systolic-2" />
+
+        <EditText
+            android:id="@+id/blood_pressure_systolic_2_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/blood_pressure_systolic_2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/blood_pressure_diastolic_edit_box"
+            android:background="@drawable/rectangular_edittext" />
+
+        <TextView
+            android:id="@+id/blood_pressure_diastolic_2"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/blood_pressure_systolic_2_edit_box"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/heart_rate"
+            android:text="Blood Pressure Diastolic-2" />
+
+        <EditText
+            android:id="@+id/blood_pressure_diastolic_2_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/blood_pressure_diastolic_2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/heart_rate_edit_box"
+            android:background="@drawable/rectangular_edittext" />
+
+        <TextView
+            android:id="@+id/systolic_lowest"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/blood_pressure_diastolic_2_edit_box"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/height"
+            android:text="Systolic Lowest" />
+
+        <EditText
+            android:id="@+id/systolic_lowest_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/systolic_lowest"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/height_edit_box"
+            android:background="@drawable/rectangular_edittext" />
+
+        <TextView
+            android:id="@+id/diastolic_lowest"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/systolic_lowest_edit_box"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/weight"
+            android:text="Diastolic Lowest" />
+
+        <EditText
+            android:id="@+id/diastolic_lowest_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/diastolic_lowest"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/weight_edit_box"
+            android:background="@drawable/rectangular_edittext" />
+
+        <TextView
+            android:id="@+id/comments"
+            android:layout_width="220dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/abdominal_circumference"
+            android:text="Comments" />
+
+        <EditText
+            android:id="@+id/comments_edit_box"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/comments"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/abdominal_circumference_edit_box"
+            android:background="@drawable/rectangular_edittext" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/Close"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:onClick="close"
+            android:text="Close" />
+
+        <Button
+            android:id="@+id/BeginAnalysis"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/Close"
+            android:background="@android:color/holo_orange_dark"
+            android:gravity="center"
+            android:text="Complete" />
+    </RelativeLayout>
+
+</RelativeLayout>

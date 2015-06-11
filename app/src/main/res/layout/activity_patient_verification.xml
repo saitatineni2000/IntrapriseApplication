@@ -1,0 +1,275 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@android:color/darker_gray" >
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/site_logo" />
+
+        <TextView
+            android:id="@+id/clinictext"
+            style="@style/FontSizeMedium"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/image2"
+            android:text="@string/clinic_name"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/clinictime"
+            style="@style/FontSizeMedium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/clinictext"
+            android:text="Clinic Time:"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/FontSizeMedium"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/clinictime"
+            android:clickable="true"
+            android:text="@string/time"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/home"
+            style="@style/FontSizeMedium"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/time"
+            android:text="@string/home"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/user"
+            style="@style/FontSizeMedium"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/home"
+            android:text="@string/user"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/logout"
+            style="@style/FontSizeMedium"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/user"
+            android:text="@string/logout"
+            android:textColor="#0079D2" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/patVerifTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/FontSizeLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start HE - Patient Verification"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/imagesLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/patVerifTitle"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/image10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/piccolo" />
+
+        <ImageView
+            android:id="@+id/image20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/a1c" />
+
+        <ImageView
+            android:id="@+id/image30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/manual_metrics" />
+
+        <ImageView
+            android:id="@+id/image40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/vaccine" />
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagesLayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/rectangular_box"
+        android:paddingTop="50dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="20dp"
+            android:text="PATIENT VERIFICATION"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="5dp"
+                android:paddingTop="25dp"
+                android:text="Name:"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:text="MARY SMITH"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:paddingTop="25dp"
+            android:text="Enter Date of Birth"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/DateofbirthID"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                
+                android:hint="Date Of Birth"
+                android:inputType="textPersonName" />
+            
+            <ImageButton
+            android:id="@+id/pv_calendar_image_button"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/search_effective_date"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/DateofbirthID"
+            android:src="@drawable/calendar" />
+
+	        <DatePicker
+	            android:id="@+id/pv_datePicker"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:visibility="gone" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/darker_gray"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/holo_orange_dark"
+                android:gravity="center"
+                android:onClick="Submit"
+                android:text="Submit" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="35dp"
+	            android:text="Cancel"
+	            android:background="@android:color/holo_orange_dark"
+	            android:gravity="center"
+	            android:layout_marginTop="15dp"
+	            android:onClick="Cancel"
+	            android:layout_marginLeft="30dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

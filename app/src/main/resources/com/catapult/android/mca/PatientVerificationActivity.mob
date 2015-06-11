@@ -1,0 +1,76 @@
+package com.catapult.android.mca;
+
+import java.util.Calendar;
+
+import com.catapult.android.mca.PreClinicActivity.DatePickerFragment;
+import com.fourmob.datetimepicker.date.DatePickerDialog;
+import com.fourmob.datetimepicker.date.DatePickerDialog.OnDateSetListener;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class PatientVerificationActivity extends FragmentActivity implements OnDateSetListener {
+	
+	private int yr, mon, dy;
+    final Calendar calendar = Calendar.getInstance();
+    final DatePickerDialog datePickerDialog = DatePickerDialog.newInstance(this, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), false);
+    public static final String DATEPICKER_TAG = "datepicker";
+    
+    @Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_patient_verification);
+		
+		findViewById(R.id.DateofbirthID).setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                datePickerDialog.setVibrate(false);
+                datePickerDialog.setYearRange(1985, 2028);
+                datePickerDialog.setCloseOnSingleTapDay(true);
+                datePickerDialog.show(getSupportFragmentManager(), DATEPICKER_TAG);
+            }
+        });
+		
+		if (savedInstanceState != null) {
+            DatePickerDialog dpd = (DatePickerDialog) getSupportFragmentManager().findFragmentByTag(DATEPICKER_TAG);
+            if (dpd != null) {
+                dpd.setOnDateSetListener(this);
+            }
+        }
+	}
+	
+	public void Submit(View view) {
+		System.out.println("Inside PatientVerificationActivity");
+		Intent homeIntent = new Intent(getApplicationContext(),
+				PiccoloSetupActivity.class);
+		homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(homeIntent);
+		
+		EditText datePickerButton = (EditText) findViewById(
+	            R.id.DateofbirthID);
+		
+		
+	}
+	
+	public void showTimePickerDialog(View v) {
+	    DialogFragment newFragment = new DatePickerFragment();
+	    newFragment.show(getSupportFragmentManager(), "timePicker");
+	}
+	
+	
+	
+	@Override
+	public void onDateSet(DatePickerDialog datePickerDialog, int year, int month, int day) {
+	        Toast.makeText(PatientVerificationActivity.this, "new date:" + year + "-" + month + "-" + day, Toast.LENGTH_LONG).show();
+	}
+}

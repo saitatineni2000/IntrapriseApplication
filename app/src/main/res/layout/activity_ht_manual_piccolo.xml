@@ -1,0 +1,523 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+	
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@android:color/darker_gray"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/site_logo" />
+
+        <TextView
+            android:id="@+id/clinictext"
+            style="@style/FontSizeMedium"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/image2"
+            android:text="@string/clinic_name"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/clinictime"
+            style="@style/FontSizeMedium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/clinictext"
+            android:text="Clinic Time:"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/FontSizeMedium"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/clinictime"
+            android:clickable="true"
+            android:text="@string/time"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/home"
+            style="@style/FontSizeMedium"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/time"
+            android:text="@string/home"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/user"
+            style="@style/FontSizeMedium"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/home"
+            android:text="@string/user"
+            android:textColor="#0079D2" />
+
+        <TextView
+            android:id="@+id/logout"
+            style="@style/FontSizeMedium"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/user"
+            android:text="@string/logout"
+            android:textColor="#0079D2" />
+    </RelativeLayout>
+    
+   <LinearLayout
+        android:id="@+id/piccolo_clinical_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+    
+
+        <TextView
+            android:id="@+id/piccolo_title"
+            style="@style/FontSizeLarge"
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Piccolo Clinical Data"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+ 	 </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/piccolo_box"
+        android:layout_width="1000dp"
+        android:layout_height="400dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/piccolo_clinical_data"
+        android:background="@drawable/piccolo_clinical_data_box" >
+
+        <RelativeLayout
+            android:id="@+id/piccolo_clinical_data_column1"
+            android:layout_width="340dp"
+            android:layout_height="500dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="60dp" >
+
+            <LinearLayout
+                android:id="@+id/piccolo_clinical_data_row1"
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/total_cholestrol"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="Total Cholestrol"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/total_cholestrol_edit_text"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    
+                    android:text="000" />
+
+                <TextView
+                    android:id="@+id/total_cholestrol_units"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="mg/dl"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/piccolo_clinical_data_row2"
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/piccolo_clinical_data_row1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/hdl"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="HDL"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/hdl_edit_text"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    
+                    android:text="000" />
+
+                <TextView
+                    android:id="@+id/hdl_units"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="mg/dl"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/piccolo_clinical_data_row3"
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/piccolo_clinical_data_row2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/triglycerides"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="Triglycerides"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/triglycerides_edit_text"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    
+                    android:text="000" />
+
+                <TextView
+                    android:id="@+id/triglycerides_units"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="mg/dl"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/piccolo_clinical_data_row4"
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/piccolo_clinical_data_row3"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/alt"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="ALT"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/alt_edit_text"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    
+                    android:text="000" />
+
+                <TextView
+                    android:id="@+id/alt_units"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="IU/L"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/piccolo_clinical_data_row5"
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/piccolo_clinical_data_row4"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/ast"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="AST"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/ast_edit_text"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    
+                    android:text="000" />
+
+                <TextView
+                    android:id="@+id/ast_units"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="IU/L"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/piccolo_clinical_data_row6"
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/piccolo_clinical_data_row5"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/glucose"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="Glucose"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/glucose_edit_text"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    
+                    android:text="000" />
+
+                <TextView
+                    android:id="@+id/glucose_units"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="mg/dl"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/piccolo_clinical_data_column2"
+            android:layout_width="400dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="50dp"
+            android:layout_toRightOf="@+id/piccolo_clinical_data_column1" >
+
+            <LinearLayout
+                android:id="@+id/piccolo_clinical_data_row21"
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/glucose_adjusted"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="Glucose - Adjusted"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/glucose_adjusted_edit_text"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    
+                    android:text="000" />
+
+                <TextView
+                    android:id="@+id/glucose_adjusted_units"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="mg/dl"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/piccolo_clinical_data_row22"
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/piccolo_clinical_data_row21"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tch"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="TC/H"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/tch_edit_text"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    
+                    android:text="000" />
+
+                <TextView
+                    android:id="@+id/tch_units"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="mg/dl"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/piccolo_clinical_data_row23"
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/piccolo_clinical_data_row22"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/ldl"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="LDL"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/ldl_edit_text"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    
+                    android:text="000" />
+
+                <TextView
+                    android:id="@+id/ldl_units"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="mg/dl"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/piccolo_clinical_data_row24"
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/piccolo_clinical_data_row23"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/vldl"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="VLDL"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/vldl_edit_text"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    
+                    android:text="000" />
+
+                <TextView
+                    android:id="@+id/vldl_units"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="mg/dl"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/piccolo_clinical_data_row25"
+                android:layout_width="400dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/piccolo_clinical_data_row24"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/hba1c"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="HbA1c"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/hba1c_edit_text"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    
+                    android:text="000" />
+
+                <TextView
+                    android:id="@+id/hba1c_units"
+                    style="@style/FontSizeMedium"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="mg/dl"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/piccolo_box"
+        android:layout_marginTop="50dp" >
+
+        <Button
+            android:id="@+id/saveBtn"
+            style="@style/FontSizeMedium"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="350dp"
+            android:layout_marginRight="100dp"
+            android:onClick="save"
+            android:text="Save"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            style="@style/FontSizeMedium"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/saveBtn"
+            android:onClick="cancel"
+            android:text="Cancel"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+
+</RelativeLayout>
